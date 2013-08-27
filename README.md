@@ -1,9 +1,6 @@
 spelling_fixer
 ==============
 
-The Purpose
-===========
-
 Spelling_Fixer is a collection of scripts in the Autohotkey language for doing autocorrection
 of commonly misspelled words in a number of languages. 
 
@@ -42,3 +39,23 @@ These screen-scraping tools are not generic enough to warrant putting in the rep
 
 The list of mis-spelled words and their corrections are used to generate an xml format,
 and that xml format is used to generate the Autohotkey code. 
+
+Obviously someone familiar with the target language edits every list that has been generated. Remember that the result should be a list 
+about which there should be no disagreements that these are words for which there is no variant. 
+
+
+Structure of the project
+==========
+
+Each language has its own subfolder, the names of these folders are concatenated from the
+ISO 639-1 code for the language, an underscore _ and the ISO 3166 for the country in which the language is found. 
+
+So en_CA would be the folder containing the list of misspellings for English Canadian (such a list might be different 
+than en_US given that it is the common misspellings in the language, and that we remove anything that might lead to complications
+requiring user input, for example if a word is frequently misspelled in English Canadian, but the misspelling happens to be the same
+as one found in French Canadian, then the misspelling should be removed from the list of words to autocorrect.
+
+In the subfolder for the language there should be an .ahk file with the same name as the folder, a readme noting any extra words that have
+been removed by the human editor before adding to the project, and a lang.ico file that will be used to generate the icon for the
+application when running in the Windows Taskbar. 
+
