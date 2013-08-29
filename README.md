@@ -29,6 +29,17 @@ Windows does.
 
 The Unicode version of Autohotkey is needed. 
 
+How to Use
+===========
+
+Each language script can be run standalone. 
+
+The script will show up in the taskbar, the following menu entries are provided:
+
+* Exit - Exits the script, If Exit is not present then it will be the word in the target language meaning Exit.
+* List spelling corrections - Shows a window with a list of the spelling corrections, if this entry is not found then look
+  for the phrase in the target language which most closely means the same thing. 
+
 How the Autothotkey Scripts are written
 ===========
 see https://github.com/bryanrasmussen/spelling_fixer/wiki/How-the-Autohotkey-Scripts-are-Generated
