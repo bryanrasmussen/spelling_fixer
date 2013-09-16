@@ -29,33 +29,18 @@ Windows does.
 
 The Unicode version of Autohotkey is needed. 
 
-How the Autothotkey Scripts are written
+How to Use
 ===========
 
-Currently I don't handwrite the scripts but generate them from screen-scraping various sources, 
-for example Wikipedia sites for the respective languages listing common spelling errors. 
+Each language script can be run standalone. 
 
-These screen-scraping tools are not generic enough to warrant putting in the repo.
+The script will show up in the taskbar, the following menu entries are provided:
 
-The list of mis-spelled words and their corrections are used to generate an xml format,
-and that xml format is used to generate the Autohotkey code. 
+* Exit - Exits the script, If Exit is not present then it will be the word in the target language meaning Exit.
+* List spelling corrections - Shows a window with a list of the spelling corrections, if this entry is not found then look
+  for the phrase in the target language which most closely means the same thing. 
 
-Obviously someone familiar with the target language edits every list that has been generated. Remember that the result should be a list 
-about which there should be no disagreements that these are words for which there is no variant. 
-
-
-Structure of the project
-==========
-
-Each language has its own subfolder, the names of these folders are concatenated from the
-ISO 639-1 code for the language, an underscore _ and the ISO 3166 for the country in which the language is found. 
-
-So en_CA would be the folder containing the list of misspellings for English Canadian (such a list might be different 
-than en_US given that it is the common misspellings in the language, and that we remove anything that might lead to complications
-requiring user input, for example if a word is frequently misspelled in English Canadian, but the misspelling happens to be the same
-as one found in French Canadian, then the misspelling should be removed from the list of words to autocorrect.
-
-In the subfolder for the language there should be an .ahk file with the same name as the folder, a readme noting any extra words that have
-been removed by the human editor before adding to the project, and a lang.ico file that will be used to generate the icon for the
-application when running in the Windows Taskbar. 
+How the Autothotkey Scripts are written
+===========
+see https://github.com/bryanrasmussen/spelling_fixer/wiki/How-the-Autohotkey-Scripts-are-Generated
 
